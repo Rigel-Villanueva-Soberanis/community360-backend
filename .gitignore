@@ -1,0 +1,35 @@
+## Visual Studio / .NET
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.log
+## Secretos y credenciales (nunca al repositorio)
+appsettings.Production.json
+appsettings.Local.json
+secrets.json
+.env
+*.pem
+Api/secrets.plantilla.json.bak
+
+## Archivos temporales y de trabajo (no van al repositorio)
+_to_delete/
+*.tgz
+*.bak
+.env.*
+*.pfx
+*.p12
+*.key
+
+# Más secretos posibles
+*.env
+.dev.vars
+secrets.*.json
+!Api/secrets.plantilla.json
+*.crt
+*.cer
+
+# Documentación y guías (no se suben)
+*.md
+cargar_secretos.ps1

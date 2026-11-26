@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+.vs/
+.env
+*.pem
+Tests/
+postman/
+_to_delete/
+*.md
+*.ps1
