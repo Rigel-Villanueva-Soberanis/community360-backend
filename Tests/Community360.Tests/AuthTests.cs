@@ -189,7 +189,7 @@ public class JwtGeneratorTests
 
     [Fact]
     public void MinutosInvalidosUsanElValorPorDefecto()
-        => Assert.Equal(60, JwtSettings.Desde(k => k == "Jwt:Key" ? Util.Clave : k == "Jwt:MinutosVida" ? "-5" : null).MinutosVida);
+        => Assert.Equal(480, JwtSettings.Desde(k => k == "Jwt:Key" ? Util.Clave : k == "Jwt:MinutosVida" ? "-5" : null).MinutosVida);
 }
 
 [ApiController, Route("api/prueba")]

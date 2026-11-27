@@ -12,7 +12,7 @@ public sealed record JwtSettings(string Issuer, string Audience, string Key, int
             throw new InvalidOperationException(
                 $"Falta la clave del token: define JWT_KEY en backend/.env con al menos {LargoMinimoClave} caracteres.");
 
-        var minutos = int.TryParse(leer("Jwt:MinutosVida"), out var m) && m is >= 1 and <= 1440 ? m : 60;
+        var minutos = int.TryParse(leer("Jwt:MinutosVida"), out var m) && m is >= 1 and <= 1440 ? m : 480;
         return new JwtSettings(leer("Jwt:Issuer") ?? "community360", leer("Jwt:Audience") ?? "community360-clientes", key, minutos);
     }
 }
